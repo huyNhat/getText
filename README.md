@@ -1,5 +1,5 @@
 # GetText
-(https://github.com/huyNhat/getText/blob/master/ic_gettext_launcher-web.png "Logo")
+![App Logo](https://github.com/huyNhat/getText/blob/master/ic_gettext_launcher-web.png)
 
 Simplify that way students buying and selling their textbooks:
   - Built-in barcode scanner
@@ -9,7 +9,7 @@ Simplify that way students buying and selling their textbooks:
   - Wishlist
   - Realtime notfication
 ### Screenshots
-https://github.com/huyNhat/getText/blob/master/get_text.png
+![App Screenshots](https://github.com/huyNhat/getText/blob/master/get_text.png)
 
 ### Built with
 - Firebase Auth & Database
