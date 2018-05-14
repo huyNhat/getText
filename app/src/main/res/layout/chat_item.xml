@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:layout_marginStart="@dimen/activity_horizontal_margin"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_marginTop="4dp"
+        android:id="@+id/photoImageView"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/ic_launcher"
+        android:adjustViewBounds="true" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/messageTextView"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/Black"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            tools:text="Message" />
+
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/messageTextView"
+            android:layout_height="wrap_content"
+            android:textColor="@color/Black"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            tools:text="Name" />
+        <TextView
+            android:id="@+id/last_message_TextView"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@+id/nameTextView"
+            android:layout_alignBaseline="@+id/nameTextView"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            tools:text="last messages here" />
+
+        <TextView
+            android:id="@+id/timeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            tools:text="3:52 P.M." />
+    </RelativeLayout>
+</LinearLayout>

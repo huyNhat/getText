@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:appcompat="http://schemas.android.com/tools">
+
+    <!-- Remove the add here because FAB added
+    <item
+        android:id="@+id/add_item_option"
+        android:icon="@drawable/ic_add_item"
+        app:showAsAction="always"
+        android:title=""/>
+       -->
+
+
+
+</menu>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <ImageView
+        android:id="@+id/bookPicture"
+        android:layout_width="138dp"
+        android:layout_height="146dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/logo_get_text"
+        android:visibility="visible"/>
+
+
+    <EditText
+        android:id="@+id/inputBookTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Book Title"
+        android:visibility="gone"
+        android:drawableLeft="@drawable/ic_book"
+        app:layout_constraintEnd_toEndOf="@+id/bookPicture"
+        app:layout_constraintStart_toStartOf="@+id/bookPicture"
+        app:layout_constraintTop_toBottomOf="@+id/bookPicture" />
+
+    <EditText
+        android:id="@+id/inputPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:drawableLeft="@drawable/ic_price"
+        android:ems="10"
+        android:hint="Price"
+        android:visibility="gone"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/inputISBN"
+        app:layout_constraintTop_toBottomOf="@+id/inputISBN" />
+
+
+    <Spinner
+        android:id="@+id/spinnerCondition"
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:visibility="gone"
+        android:layout_marginTop="8dp"
+        android:entries="@array/conditionList"
+        app:layout_constraintEnd_toEndOf="@+id/inputPrice"
+        app:layout_constraintStart_toStartOf="@+id/inputPrice"
+        app:layout_constraintTop_toBottomOf="@+id/inputPrice" />
+
+    <Button
+        android:id="@+id/buttonPost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Post"
+        android:visibility="gone"
+        android:textColor="@color/White"
+        android:background="@drawable/green_onclick_gray_layout"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerCondition"
+        app:layout_constraintStart_toStartOf="@+id/spinnerCondition"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerCondition" />
+    <Button
+        android:id="@+id/buttonSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Search for Book"
+        android:textColor="@color/White"
+        android:background="@drawable/green_onclick_gray_layout"
+        app:layout_constraintEnd_toEndOf="@+id/buttonPost"
+        app:layout_constraintStart_toStartOf="@+id/buttonPost"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPost"
+        android:visibility="visible"/>
+
+    <EditText
+        android:drawableLeft="@drawable/ic_code"
+        android:id="@+id/inputISBN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:hint="Enter ISBN manually or Scan a barcode"
+        android:textSize="14sp"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputBookTitle" />
+
+    <ImageView
+        android:id="@+id/imageViewScanButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSearch"
+        app:layout_constraintEnd_toEndOf="@+id/inputISBN"
+        app:layout_constraintHorizontal_bias="0.974"
+        app:layout_constraintStart_toStartOf="@+id/inputISBN"
+        app:layout_constraintTop_toTopOf="@+id/inputISBN"
+        app:srcCompat="@drawable/ic_scan" />
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progressBar_posting_item"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="73dp"
+        android:layout_height="78dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSearch"
+        app:layout_constraintEnd_toEndOf="@+id/inputISBN"
+        app:layout_constraintStart_toStartOf="@+id/inputISBN"
+        app:layout_constraintTop_toTopOf="@+id/bookPicture"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <LinearLayout
+        android:id="@+id/sample_scanning_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:textAlignment="center"
+        android:visibility="visible"
+        tools:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="scan_qr_code_success.json"
+            app:lottie_loop="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Try the Scan Barcode to post your book quicker"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+
+    </LinearLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>
+
+

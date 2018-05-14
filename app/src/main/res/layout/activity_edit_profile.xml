@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="4dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:drawableLeft="@drawable/ic_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:textSize="16sp"
+                android:hint="Your email"
+                android:textColor="@color/Black"
+                android:id="@+id/email_text" />
+
+            <EditText
+                android:drawableLeft="@drawable/ic_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:hint="Your phone number"
+                android:textSize="16sp"
+                android:textColor="@color/Black"
+                android:id="@+id/phone_text" />
+
+            <EditText
+                android:drawableLeft="@drawable/ic_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:hint="Your college"
+                android:textColor="@color/Black"
+                android:id="@+id/school_text" />
+
+            <EditText
+                android:drawableLeft="@drawable/ic_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Your major"
+                android:textSize="16sp"
+                android:textColor="@color/Black"
+                android:id="@+id/major_text" />
+
+            <Button
+                android:id="@+id/save_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:layout_gravity="right"
+                android:textColor="@color/White"
+                android:background="@drawable/green_onclick_gray_layout"/>
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
