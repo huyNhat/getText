@@ -13,7 +13,8 @@ Simplify that way students buying and selling their textbooks:
 
 ### Built with
 - Firebase Auth & Database
-- CloudFunction
+- Cloud Function-Nodejs
+- Firebase Cloud Message
 - ZXing Barcode
 - Lottie
 - Glide
