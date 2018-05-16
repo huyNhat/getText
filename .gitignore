@@ -8,6 +8,11 @@
 # Java class files
 *.class
 
+
+# ignore node/grunt dependency directories
+functions/node_modules/
+node_modules/
+
 # Generated files
 bin/
 gen/
