@@ -121,7 +121,7 @@
                 android:id="@+id/appCompatButtonContactSeller"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="0.8"
+                android:layout_weight="0.7"
                 android:layout_marginTop="20dp"
                 android:textColor="@color/White"
                 android:background="@drawable/green_onclick_gray_layout"
@@ -129,10 +129,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="0.2"
+                android:layout_weight="0.3"
                 android:gravity="center"
                 android:text="This will automatically send to the seller"
-                android:paddingBottom="4dp"/>
+                />
 
         </LinearLayout>
 

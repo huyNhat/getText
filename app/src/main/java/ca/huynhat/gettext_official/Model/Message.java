@@ -1,7 +1,7 @@
 package ca.huynhat.gettext_official.Model;
 
 /**
- * Created by huynhat on 2018-03-29.
+ * Ref: https://github.com/estwanick/FirebaseChat
  */
 
 public class Message {

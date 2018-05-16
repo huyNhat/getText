@@ -233,13 +233,14 @@ public class ItemDetailsActivity extends AppCompatActivity implements View.OnCli
     }
 
     private String getCurrentDateTime(){
-        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+        DateFormat dateFormat = new SimpleDateFormat("HH:mm");
         Date date = new Date();
         return dateFormat.format(date).toString();
     }
 
     /**
      * Create chat between seller and buyer
+     * Ref: https://github.com/estwanick/FirebaseChat
      */
     public void createChat(){
         mChat = new Chat("","","","","");
@@ -265,11 +266,22 @@ public class ItemDetailsActivity extends AppCompatActivity implements View.OnCli
         String initialMessage = "Condition :"+condition.getText().toString()+ "\nAsking Price :$"+price.getText().toString();
         Message initialMessages =
                 new Message("System","", initialMessage,bookTitle.getText().toString(), getCurrentDateTime());
+
+
         final DatabaseReference initMsgRef = mFirebaseDatabase.getReference("messages/" + pushKey);
         final DatabaseReference msgPush = initMsgRef.push();
         final String msgPushKey = msgPush.getKey();
         initMsgRef.child(msgPushKey).setValue(initialMessages);
 
+        //Initial message from buyer
+        String interestedMessage= "I'm interested in buying your \"" +bookTitle.getText().toString()+"\" book";
+        Message interestedMessageFromBuyer =
+                new Message(FirebaseAuth.getInstance().getCurrentUser().getUid(),seller_id, interestedMessage,bookTitle.getText().toString(), getCurrentDateTime());
+
+        final String msgPushKey2 =initMsgRef.push().getKey();
+        initMsgRef.child(msgPushKey2).setValue(interestedMessageFromBuyer);
+
+        //Push chat to buyer
         chatItemMap = new HashMap<String, Object>();
         chatItemMap.put("/chats/" + pushKey, chatObj); //repushes chat obj -- Not space efficient
         mCurrentUserDatabaseReference.updateChildren(chatItemMap); //Adds Chatkey to users chats

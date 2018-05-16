@@ -34,6 +34,12 @@ import ca.huynhat.gettext_official.Model.Message;
 import ca.huynhat.gettext_official.Model.User;
 import ca.huynhat.gettext_official.R;
 
+/**
+ * Ref: https://github.com/estwanick/FirebaseChat
+ */
+
+//TODO: Sort latest message FIRST
+
 public class ChatMessagesActivity extends AppCompatActivity {
 
     private String messageId, seller_id, buyer_id,receiver_id="";
@@ -77,10 +83,6 @@ public class ChatMessagesActivity extends AppCompatActivity {
 
         init();
         showMessages();
-
-
-
-        //receiver_id = current_user_id.equals(seller_id) ? buyer_id : seller_id;
     }
 
     private void init() {
