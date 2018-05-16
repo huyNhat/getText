@@ -10,6 +10,7 @@ Simplify that way students buying and selling their textbooks:
   - Realtime notfication
 ### Screenshots
 ![App Screenshots](https://github.com/huyNhat/getText/blob/master/get_text.png)
+![More Screenshots](https://github.com/huyNhat/getText/blob/master/additonal_screens.png)
 
 ### Built with
 - Firebase Auth & Database
