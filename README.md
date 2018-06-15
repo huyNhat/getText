@@ -1,5 +1,4 @@
-# GetText
-![App Logo](https://github.com/huyNhat/getText/blob/master/ic_gettext_launcher-web.png)
+# GetText<img src="https://github.com/huyNhat/getText/blob/master/ic_gettext_launcher-web.png" width="16%" height="16%" title="Github Logo">
 
 Simplify that way students buying and selling their textbooks:
   - Built-in barcode scanner
