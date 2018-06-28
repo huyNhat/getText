@@ -16,6 +16,7 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
+        android:name=".GetTextApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_gettext_launcher"
         android:label="Get Text"

@@ -232,8 +232,8 @@ public class ItemDetailsActivity extends AppCompatActivity implements View.OnCli
         }
     }
 
-    private String getCurrentDateTime(){
-        DateFormat dateFormat = new SimpleDateFormat("HH:mm");
+    public static String getCurrentDateTime(){
+        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         Date date = new Date();
         return dateFormat.format(date).toString();
     }
